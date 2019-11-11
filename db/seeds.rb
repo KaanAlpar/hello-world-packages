@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Make 10 users
-User.destroy_all
 puts "Making 10 users..."
 10.times do
   first_name = Faker::Name.first_name
@@ -20,7 +19,6 @@ end
 puts "Finished making users..."
 
 # Make 20 packages, 2 for each user
-Package.destroy_all
 puts "Making 20 packages..."
 User.all.each do |user|
   2.times do
@@ -33,7 +31,6 @@ puts "Finished making packages..."
 
 # Make 60 items, 3 for each package
 
-Item.destroy_all
 puts "Making items..."
 Package.all.each do |package|
   (3..6).to_a.sample.times do
