@@ -24,7 +24,6 @@ class PackagesController < ApplicationController
   private
 
   def package_params
-    # params[:task] -> permit name, address, raint
     params.require(:package).permit(:name, :price, :origin)
   end
 end
