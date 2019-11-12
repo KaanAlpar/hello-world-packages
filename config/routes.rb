@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'orders/new'
+  get 'orders/create'
   devise_for :users
   root to: 'pages#home'
   get '/dashboard', to: 'users#show', as: 'dashboard'
