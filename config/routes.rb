@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :packages, only: [:index, :show, :new, :create] do
     resources :orders, only: [:create]
+    resources :items, only: [:new, :create, :show]
   end
 
 end

@@ -12,6 +12,7 @@ class OrdersController < ApplicationController
   private
 
   def order_params
+    # fix the create
     params.require(:order).permit(:user_id, :package_id)
   end
 end
