@@ -1,8 +1,29 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= cl_image_tag("gx0kmf8qtcjjndmxwbkg",
-      width: 400, height: 300, crop: :fill) %>
-
-<!-- for face detection -->
-<%= cl_image_tag("h0zujfsyes3viyowxeed",
-      width: 150, height: 150, crop: :thumb, gravity: :face) %>
+<div class="landing-page-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'landing_page_banner.jpg' %>');">
+  <div class="pink-search-bar">
+      <h2>pick the package origin:</h2>
+  </div>
+</div>
+  <div class="background-primary">
+     <h1> Hello World: Curing homesickness from all over the world</h1>
+      <h4>Order snack packages from anywhere you want!</h4>
+   <div class="card-product d-flex justify-content-center">
+      <div class="landing-page-card">
+        <div>
+          <h2>1. Choose the package's origin</h2>
+            <p> Use our dropdown list on top to pick from our list of package origin to see our vast results. There is a package for everyone!</p>
+        </div>
+      </div>
+      <div class="landing-page-card">
+        <div>
+          <h2>2. Go through our results page</h2>
+            <p> Choose the package of your liking! Our result page will only show packages from the origin you chose</p>
+        </div>
+      </div>
+      <div class="landing-page-card">
+        <div>
+          <h2>3. Order</h2>
+            <p> see a detailed description of the package and order if it suits your taste </p>
+        </div>
+      </div>
+    </div>
+  </div>
