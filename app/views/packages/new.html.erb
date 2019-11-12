@@ -1,30 +1,23 @@
 <div class="container">
-  <h1>Add Package:</h1>
+  <h1 class="text-center">add package</h1>
   <div class="background-primary">
-    <div class="user_card">
-      <div class="row">
-        <div class="align-items-center">
-          <%= simple_form_for @package do |f| %>
-            <%= f.input :name %>
-            <%= f.input :price %>
-            <button type="button" class="btn btn-outline-dark">
-              <%= f.button :submit %>
-            </button>
-          <% end %>
-        </div>
-      </div>
+    <div class="row justify-content-center">
+        <%= simple_form_for @package do |f| %>
+          <%= f.input :name %>
+          <%= f.input :price %>
+          <%= f.input :origin, collection: ["Turkey", "India", "Brazil", "France"]  %>
+          <%= f.input :description %>
+          <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
+          <%= f.button :submit, value: "add", class: 'btn btn-outline-secondary' %>
+        <% end %>
     </div>
   </div>
 
   <div class="row justify-content-between m-3">
-    <%= link_to '/dashboard' do %>
-      <button type="button" class="btn btn-secondary btn-lg rounded-pill">Cancel</button>
+    <%= link_to '/dashboard', class: "btn btn-secondary btn-lg rounded-pill" do %>
+      Cancel
     <% end %>
     <!-- cancel button leads back to dashboard -->
-
-    <%= link_to 'new_package_item_path' do %>
-      <button type="button" class="btn btn-primary btn-lg rounded-pill">Next</button>
-    <% end %>
-    <!-- next button leads to new_package_item_path -->
   </div>
 </div>

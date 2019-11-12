@@ -1,7 +1,4 @@
 class PackagesController < ApplicationController
-  def index
-    @packages = Package.all
-  end
 
   def show
     @package = Package.find(params[:id])
@@ -13,6 +10,7 @@ class PackagesController < ApplicationController
 
   def create
     @package = Package.new(package_params) # strong params!
+    @package.user = current_user
     if @package.save
       redirect_to package_path(@package)
     else
@@ -24,6 +22,6 @@ class PackagesController < ApplicationController
   private
 
   def package_params
-    params.require(:package).permit(:name, :price, :origin)
+    params.require(:package).permit(:name, :price, :origin, :photo)
   end
 end
