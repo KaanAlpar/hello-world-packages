@@ -18,11 +18,13 @@ puts "Making 10 users..."
 end
 puts "Finished making users..."
 
+Package.destroy_all
+
 # Make 20 packages, 2 for each user
 puts "Making 20 packages..."
 User.all.each do |user|
   2.times do
-   package = Package.new(user: user, name: Faker::Movies::HarryPotter.spell, price: (1..10).to_a.sample, origin: Faker::Nation.flag, description: Faker::Movies::HarryPotter.quote)
+   package = Package.new(user: user, name: Faker::Movies::HarryPotter.spell, price: (1..10).to_a.sample, origin: Faker::Address.country, description: Faker::Movies::HarryPotter.quote)
    package.save!
    p package
   end
