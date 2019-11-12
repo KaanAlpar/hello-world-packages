@@ -40,3 +40,18 @@ Package.all.each do |package|
   end
 end
 puts "Finished making items..."
+
+# Add images
+puts "Adding images to packages"
+Package.all.each do |p|
+  p.remote_photo_url = "https://source.unsplash.com/1080/?package,food"
+  p.save!
+end
+
+puts "Adding images to items"
+Package.all.each do |p|
+  p.items.each do |i|
+    i.remote_photo_url = "https://source.unsplash.com/500x500/?nature,water"
+    i.save!
+  end
+end
