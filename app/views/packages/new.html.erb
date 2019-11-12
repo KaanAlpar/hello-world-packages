@@ -1,9 +1,9 @@
 <div class="container">
+  <h1>Add Package:</h1>
   <div class="background-primary">
     <div class="user-card">
       <div class="row">
         <div class="align-items-center">
-          <h1>Add Package:</h1>
           <%= simple_form_for @package do |f| %>
             <%= f.input :name %>
             <%= f.input :price %>
@@ -11,21 +11,20 @@
               <%= f.button :submit %>
             </button>
           <% end %>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="row">
+  <div class="row justify-content-between m-3">
     <%= link_to '/dashboard' do %>
-      <button type="button" class="btn btn-secondary btn-lg">Cancel</button>
+      <button type="button" class="btn btn-secondary btn-lg rounded-pill">Cancel</button>
     <% end %>
     <!-- cancel button leads back to dashboard -->
 
     <%= link_to 'new_package_item_path' do %>
-      <button type="button" class="btn btn-primary btn-lg">Next</button>
+      <button type="button" class="btn btn-primary btn-lg rounded-pill">Next</button>
     <% end %>
     <!-- next button leads to new_package_item_path -->
   </div>
-
 </div>
-
