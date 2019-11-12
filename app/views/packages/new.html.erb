@@ -1,13 +1,20 @@
 <div class="container">
-  <div class="row">
-    <div class="align-items-center">
-      <h1>Add a new Package:</h1>
-      <%= simple_form_for @package do |f| %>
-        <%= f.input :name %>
-        <%= f.input :price %>
-        <%= f.button :submit %>
-      <% end %>
+  <div class="background-primary">
+    <div class="user-card">
+      <div class="row">
+        <div class="align-items-center">
+          <h1>Add Package:</h1>
+          <%= simple_form_for @package do |f| %>
+            <%= f.input :name %>
+            <%= f.input :price %>
+            <button type="button" class="btn btn-outline-dark">
+              <%= f.button :submit %>
+            </button>
+          <% end %>
+      </div>
+    </div>
   </div>
+
   <div class="row">
     <%= link_to '/dashboard' do %>
       <button type="button" class="btn btn-secondary btn-lg">Cancel</button>
