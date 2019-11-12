@@ -4,26 +4,28 @@
     <div class="user_card">
       <div>
         <h2>My Packages</h2>
-          <p>
-            <ul>
-              <li>Coffee</li>
-              <li>Tea</li>
-              <li>Milk</li>
-            </ul>
-          </p>
-            <p class="button">Add Package</p>
+          <ul class="list-group">
+            <% current_user.packages.each do |package| %>
+              <li class="list-group-item bg-info">
+                <%= link_to package_path(package) do %>
+                  <%= package.name %>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+          <%= link_to 'Add Package', new_package_path, class: 'button' %>
         </div>
     </div>
     <div class="user_card">
       <div>
         <h2>My Orders</h2>
-          <p>
-            <ul>
-              <li>Coffee</li>
-              <li>Tea</li>
-              <li>Milk</li>
-            </ul>
-          </p>
+        <ul class="list-group">
+          <% current_user.orders.each do |order| %>
+            <li class="list-group-item bg-info">
+              <%= order.package.name %>
+            </li>
+          <% end %>
+        </ul>
       </div>
     </div>
   </div>
