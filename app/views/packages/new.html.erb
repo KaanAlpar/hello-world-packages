@@ -1,3 +1,24 @@
-<h1>This is the New View Page for a Package</h1>
+<div class="container">
+  <div class="row">
+    <div class="align-items-center">
+      <h1>Add a new Package:</h1>
+      <%= simple_form_for @package do |f| %>
+        <%= f.input :name %>
+        <%= f.input :price %>
+        <%= f.button :submit %>
+      <% end %>
+  </div>
+  <div class="row">
+    <%= link_to '/dashboard' do %>
+      <button type="button" class="btn btn-secondary btn-lg">Cancel</button>
+    <% end %>
+    <!-- cancel button leads back to dashboard -->
 
-<h3>It contains a form to create a new package :)</h3>
+    <%= link_to 'new_package_item_path' do %>
+      <button type="button" class="btn btn-primary btn-lg">Next</button>
+    <% end %>
+    <!-- next button leads to new_package_item_path -->
+  </div>
+
+</div>
+
