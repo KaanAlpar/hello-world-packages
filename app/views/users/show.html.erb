@@ -1,1 +1,41 @@
-<h1>This is the User's Dashboard</h1>
+<div class="background-primary">
+  <h1>User Dashboard</h1>
+  <div class="card-product d-flex justify-content-center">
+    <div class="user_card">
+      <div>
+        <h2>My Packages</h2>
+          <p>
+            <ul>
+              <li>Coffee</li>
+              <li>Tea</li>
+              <li>Milk</li>
+            </ul>
+          </p>
+            <p class="button">Add Package</p>
+        </div>
+    </div>
+    <div class="user_card">
+      <div>
+        <h2>My Orders</h2>
+          <p>
+            <ul>
+              <li>Coffee</li>
+              <li>Tea</li>
+              <li>Milk</li>
+            </ul>
+          </p>
+      </div>
+    </div>
+  </div>
+   <div class="card-product d-flex justify-content-center">
+    <div class="user_card" style="width: 500px; height: 250px;">
+      <div>
+        <h2>Search for Packages</h2>
+          <%= simple_form_for :search, url: root_path do |f| %>
+          <%= f.input :Origin, collection: ["Turkey", "India", "Brazil", "France"]  %>
+          <%= f.button :submit, class: "button" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
