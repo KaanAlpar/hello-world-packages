@@ -6,7 +6,7 @@
         <h2>My Packages</h2>
           <ul class="list-group">
             <% current_user.packages.each do |package| %>
-              <li class="list-group-item bg-info">
+              <li class="my-packages-orders">
                 <%= link_to package_path(package) do %>
                   <%= package.name %>
                 <% end %>
@@ -21,7 +21,7 @@
         <h2>My Orders</h2>
         <ul class="list-group">
           <% current_user.orders.each do |order| %>
-            <li class="list-group-item bg-info">
+            <li class="my-packages-orders">
               <%= order.package.name %>
             </li>
           <% end %>
@@ -34,7 +34,7 @@
       <div>
         <h2>Search for Packages</h2>
           <%= simple_form_for :search, url: root_path do |f| %>
-          <%= f.input :origin, collection: ["Turkey", "India", "Brazil", "France"]  %>
+          <%= f.input :origin, collection: @countries %>
           <%= f.button :submit, class: "button" %>
         <% end %>
       </div>

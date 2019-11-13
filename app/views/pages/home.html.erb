@@ -1,28 +1,28 @@
 <div class="landing-page-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'landing_page_banner.jpg' %>');">
   <div class="pink-search-bar">
     <div class="d-flex flex-column align-items-start mb-3">
-      <h2>Search our packages by country:</h2>
-      <%= simple_form_for :search, url: root_path, html: { class: 'form-inline' } do |f| %>
+      <h2>pick the package origin:</h2>
+      <%= simple_form_for :search, url: packages_path, method: :get, html: { class: 'form-inline' } do |f| %>
       <%= f.input :countries, collection: @countries, label: false %>
-      <%= f.submit "Check it out!", class: "btn btn-primary" %>
+      <%= f.submit "Search", class: "button" %>
       <% end %>
     </div>
   </div>
 </div>
   <div class="background-primary">
-     <h1>Hello World! Curing homesickness from all over the world</h1>
-      <h4>Order snack packages from abroad</h4>
+     <h1> Hello World: What is a <strong>package</strong>?</h1>
+      <h4>A package can consist of food, snacks or candies from a country of origin. <br> A popular Turkish package may consist of Baklava, Turkish delight and maybe even Turkish tea bags.</h4>
    <div class="card-product d-flex justify-content-center">
       <div class="landing-page-card">
         <div>
-          <h2>1. Choose the package's country</h2>
-            <p> Select from the list of countries and see our huge variety of packages. We have a package for everyone!</p>
+          <h2>1. Choose the origin</h2>
+            <p> Use our awesome dropdown list on the top of this page. Pick from our carefully selected list of package origins. Wondering whether there is a Korean Choco Pie package? Click on "Korea" to find out. There is a package for everyone!</p>
         </div>
       </div>
       <div class="landing-page-card">
         <div>
-          <h2>2. Look through the packages</h2>
-            <p> Choose the package you like from just the country you chose!</p>
+          <h2>2. See the results</h2>
+            <p> Browse through the packages and choose the package of your liking! Our result page will only show packages from the origin you chose!</p>
         </div>
       </div>
       <div class="landing-page-card">

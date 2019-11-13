@@ -1,11 +1,14 @@
 class PackagesController < ApplicationController
-
+  def index
+    @packages = Package.where(origin: params[:search][:countries])
+  end
   def show
     @package = Package.find(params[:id])
   end
 
   def new
     @package = Package.new
+    @countries = Package.select(:origin).distinct.pluck(:origin)
   end
 
   def create
