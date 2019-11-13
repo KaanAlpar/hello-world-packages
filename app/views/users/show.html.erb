@@ -34,7 +34,7 @@
       <div>
         <h2>Search for Packages</h2>
           <%= simple_form_for :search, url: root_path do |f| %>
-          <%= f.input :origin, collection: ["Turkey", "India", "Brazil", "France"]  %>
+          <%= f.input :origin, collection: @countries %>
           <%= f.button :submit, class: "button" %>
         <% end %>
       </div>
