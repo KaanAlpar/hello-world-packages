@@ -24,7 +24,7 @@ Package.destroy_all
 # Make 20 packages, 2 for each user
 puts "Making 5 packages for each user..."
 User.all.each do |user|
-  5.times do
+  (1..3).to_a.sample.times do
     origin = Faker::Address.country
     name = "#{origin} Package"
     description = "This wonderful package from #{origin} contains several original snacks"
