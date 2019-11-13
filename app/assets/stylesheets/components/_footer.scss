@@ -7,20 +7,28 @@
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
 }
+
 .footer-links {
+  background: #F4F4F4;
   display: flex;
   align-items: center;
 }
+
 .footer-links a {
-  color: black;
-  opacity: 0.15;
+  border-radius: 8px;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
+  margin: 4px;
+  color: rgba(0,0,0,0.3);
 }
+
 .footer-links a:hover {
   opacity: 1;
+  color: white;
+  background-color: #FAC5C5;
 }
+
 .footer .fa-heart {
   color: #D23333;
 }
