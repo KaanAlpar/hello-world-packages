@@ -1,20 +1,26 @@
+<div class="background-primary">
 <div class="container">
-  <h1>Search Results:</h1>
-  <div class="row">
-    <% @packages.each do |package| %>
-    <div class="flex-column align-items-center">
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path package.photo, height: 800, width: 800, crop: :fill %>')">
-        <h2> <%= package.name %> </h2>
-      </div>
-      <div class="user_card">
-        <div class="flex-column align-items-center">
-         <h2>Items inside this package</h2>
-         <h4> <%= package.description %> </h4>
-         <p> Price: <%= package.price %> $</p>
-         <p> <%= package.origin %> </p>
-        </div>
-      </div>
-    </div>
+  <div class="my-5">
+    <% if @packages.count == 1 %>
+      <h1> <%= @packages.count %> result for <%= @search_country %> </h1>
+    <% else %>
+      <h1> <%= @packages.count %> results for <%= @search_country %> </h1>
     <% end %>
   </div>
+  <div class="row">
+    <% @packages.each do |package| %>
+      <%= link_to package_path(package), class: 'text-decoration-none' do  %>
+        <div class="card-package">
+          <div>
+            <%= cl_image_tag(package.photo, width: 280, height: 160, crop: :fill) %>
+          </div>
+          <div class="d-flex flex-column justify-content-between py-3">
+            <h2> <%= package.name %> </h2>
+            <p>price: <%= package.price %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 </div>
