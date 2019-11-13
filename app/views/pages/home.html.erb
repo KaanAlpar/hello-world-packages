@@ -1,34 +1,34 @@
 <div class="landing-page-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path 'landing_page_banner.jpg' %>');">
   <div class="pink-search-bar">
     <div class="d-flex flex-column align-items-start mb-3">
-      <h2>pick the package origin:</h2>
+      <h2>Search our packages by country:</h2>
       <%= simple_form_for :search, url: root_path, html: { class: 'form-inline' } do |f| %>
       <%= f.input :countries, collection: @countries, label: false %>
-      <%= f.submit "Search", class: "btn btn-primary" %>
+      <%= f.submit "Check it out!", class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>
 </div>
   <div class="background-primary">
-     <h1> Hello World: Curing homesickness from all over the world</h1>
-      <h4>Order snack packages from anywhere you want!</h4>
+     <h1>Hello World! Curing homesickness from all over the world</h1>
+      <h4>Order snack packages from abroad</h4>
    <div class="card-product d-flex justify-content-center">
       <div class="landing-page-card">
         <div>
-          <h2>1. Choose the package's origin</h2>
-            <p> Use our dropdown list on top to pick from our list of package origin to see our vast results. There is a package for everyone!</p>
+          <h2>1. Choose the package's country</h2>
+            <p> Select from the list of countries and see our huge variety of packages. We have a package for everyone!</p>
         </div>
       </div>
       <div class="landing-page-card">
         <div>
-          <h2>2. Go through our results page</h2>
-            <p> Choose the package of your liking! Our result page will only show packages from the origin you chose</p>
+          <h2>2. Look through the packages</h2>
+            <p> Choose the package you like from just the country you chose!</p>
         </div>
       </div>
       <div class="landing-page-card">
         <div>
-          <h2>3. Order</h2>
-            <p> see a detailed description of the package and order if it suits your taste </p>
+          <h2>3. Place your order</h2>
+            <p> View a detailed description of the package and place your order if you like!</p>
         </div>
       </div>
     </div>
