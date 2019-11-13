@@ -11,3 +11,23 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-light .navbar-nav .nav-link,  .navbar-light .navbar-nav .active > .nav-link {
+  color: white;
+  margin: 0 8px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,  .navbar-light .navbar-nav .active > .nav-link:hover {
+  background-color:white;
+  color: #FAC5C5;
+  border-radius: 8px;
+}
+
+#company-name {
+  color: white;
+  font-size: 36px;
+  font-family: 'Gochi Hand', cursive;
+  position:absolute;
+  top:10px;
+  left:10px;
+}
