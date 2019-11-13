@@ -1,6 +1,7 @@
 class PackagesController < ApplicationController
   def index
     @packages = Package.where(origin: params[:search][:countries])
+    @search_country = params[:search][:countries]
   end
   def show
     @package = Package.find(params[:id])

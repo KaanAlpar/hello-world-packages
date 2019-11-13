@@ -1,5 +1,9 @@
 <div class="container">
-  <h1>Search Results:</h1>
+  <% if @packages.count == 1 %>
+    <h1> <%= @packages.count %> result for <%= @search_country %> </h1>
+  <% else %>
+    <h1> <%= @packages.count %> results for <%= @search_country %> </h1>
+  <% end %>
   <div class="row">
     <% @packages.each do |package| %>
     <div class="flex-column align-items-center">
