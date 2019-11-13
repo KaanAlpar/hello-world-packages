@@ -4,20 +4,20 @@
   padding: 40px;
   margin: 60px;
   overflow: hidden;
-  height: 350px;
+  height: 380px;
   width: 500px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
+  justify-content: space-around;
+  p {
+    padding: 20px;
+  }
 }
 
 .background-primary h4 {
   padding: 20px;
 }
-
-  .landing-page-card p {
-    padding: 40px;
-  }
 
 .landing-page-card h2 {
   font-family: 'Nunito', sans-serif;
