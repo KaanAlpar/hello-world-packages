@@ -1,23 +1,23 @@
-<div class="container">
-  <h1 class="text-center">add package</h1>
   <div class="background-primary">
-    <div class="row justify-content-center">
+  <h1>add package</h1>
+    <div class="card-product d-flex justify-content-center">
+    <div class="user_card" style= "height: 600px; width: 600px;">
         <%= simple_form_for @package do |f| %>
-          <%= f.input :name %>
-          <%= f.input :price %>
-          <%= f.input :origin, collection: ["Turkey", "India", "Brazil", "France"]  %>
-          <%= f.input :description %>
-          <%= f.input :photo %>
-          <%= f.input :photo_cache, as: :hidden %>
-          <%= f.button :submit, value: "add", class: 'btn btn-outline-secondary' %>
+          <strong><%= f.input :name %></strong>
+          <strong><%= f.input :price %></strong>
+          <strong><%= f.input :origin, collection: ["Turkey", "India", "Brazil", "France"]  %></strong>
+          <strong><%= f.input :description %></strong>
+          <strong><%= f.input :photo %></strong>
+          <strong><%= f.input :photo_cache, as: :hidden %></strong>
+          <%= f.button :submit, value: "add", class: 'button' %>
         <% end %>
     </div>
   </div>
 
   <div class="row justify-content-between m-3">
-    <%= link_to '/dashboard', class: "btn btn-secondary btn-lg rounded-pill" do %>
+    <%= link_to '/dashboard', class: "cancel-button" do %>
       Cancel
     <% end %>
     <!-- cancel button leads back to dashboard -->
   </div>
-</div>
+  </div>
