@@ -6,19 +6,10 @@
   <% end %>
   <div class="row">
     <% @packages.each do |package| %>
-    <div class="flex-column align-items-center">
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path package.photo, height: 800, width: 800, crop: :fill %>')">
+      <div class="card-package">
+        <%= cl_image_tag(package.photo, width: 400, height: 300, crop: :fill) %>
         <h2> <%= package.name %> </h2>
       </div>
-      <div class="user_card">
-        <div class="flex-column align-items-center">
-         <h2>Items inside this package</h2>
-         <h4> <%= package.description %> </h4>
-         <p> Price: <%= package.price %> $</p>
-         <p> <%= package.origin %> </p>
-        </div>
-      </div>
-    </div>
     <% end %>
   </div>
 </div>
