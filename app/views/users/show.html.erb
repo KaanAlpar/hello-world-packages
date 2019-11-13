@@ -6,7 +6,7 @@
         <h2>My Packages</h2>
           <ul class="list-group">
             <% current_user.packages.each do |package| %>
-              <li class="list-group-item bg-info">
+              <li class="my-packages-orders">
                 <%= link_to package_path(package) do %>
                   <%= package.name %>
                 <% end %>
@@ -21,7 +21,7 @@
         <h2>My Orders</h2>
         <ul class="list-group">
           <% current_user.orders.each do |order| %>
-            <li class="list-group-item bg-info">
+            <li class="my-packages-orders">
               <%= order.package.name %>
             </li>
           <% end %>

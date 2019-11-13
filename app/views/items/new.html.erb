@@ -1,14 +1,14 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h2>Add item to: </h1>
-      <h1>"<%= @package.name %>"</h2>
-      <%= simple_form_for [@package, @item] do |f| %>
-        <%= f.input :name %>
-        <%= f.input :photo %>
-        <%= f.input :photo_cache, as: :hidden %>
-        <%= f.button :submit, class: 'btn btn-primary' %>
-      <% end %>
-    </div>
-  </div>
+<div class="background-primary">
+  <h1>add item</h1>
+  <div class="card-product d-flex justify-content-center">
+    <div class="user_card" style= "height: 600px; width: 600px;">
+     <h2>Add item to: <%= @package.name %></h2>
+         <%= simple_form_for [@package, @item] do |f| %>
+           <%= f.input :name %>
+           <%= f.input :photo %>
+           <%= f.input :photo_cache, as: :hidden %>
+           <%= f.button :submit, class: 'button' %>
+         <% end %>
+     </div>
+   </div>
 </div>
