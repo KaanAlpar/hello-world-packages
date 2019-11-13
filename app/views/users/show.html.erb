@@ -21,9 +21,11 @@
         <h2>My Orders</h2>
         <ul class="list-group">
           <% current_user.orders.each do |order| %>
-            <li class="my-packages-orders">
-              <%= order.package.name %>
-            </li>
+            <%= link_to '#', class: 'text-decoration-none' do %>
+              <li class="my-packages-orders">
+                <%= order.package.name %>
+              </li>
+            <% end %>
           <% end %>
         </ul>
       </div>

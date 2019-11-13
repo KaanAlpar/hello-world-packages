@@ -7,5 +7,6 @@ class PagesController < ApplicationController
 
   def order_confirmed
     @package = Package.find(params[:package_id])
+    Order.create!(user: current_user, package: @package)
   end
 end
