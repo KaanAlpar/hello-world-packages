@@ -1,9 +1,12 @@
 .button, .registration-button .btn, .login-button a {
+  height: 50px;
+  width: 150px;
   background-color: #5A77A3;
   border-radius: 10px;
   border: none;
   color: white;
   padding: 12px;
+  justify-content: center;
   text-align: center;
   text-decoration: none;
   display: inline-block;
