@@ -1,5 +1,6 @@
 class Package < ApplicationRecord
   has_many :items, dependent: :destroy
+  has_many :orders, dependent: :destroy
   belongs_to :user
   validates :name, presence: true
   validates :price, presence: true
