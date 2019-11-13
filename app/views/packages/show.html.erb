@@ -2,9 +2,10 @@
 <div class="container mt-3">
   <div class="row">
     <div class="col-sm-9  ">
-      <!-- <div class="card p-3"> -->
+      <div class="p-3">
         <!-- <p><%#= @package.description %></p> -->
-      <!-- </div> -->
+        <h3>Origin: <%= @package.origin %></h3>
+      </div>
     </div>
     <div class="col-sm-3">
       <div class="d-flex flex-column align-items-center">
@@ -12,7 +13,7 @@
         <% if @package.user == current_user %>
           <%= link_to 'Add item', new_package_item_path(@package), class: 'button' %>
         <% else %>
-          <%= link_to 'Order', '#', class: 'button' %>
+          <%= link_to 'Order', package_order_confirmed_path(@package), class: 'button' %>
         <% end %>
       </div>
     </div>
