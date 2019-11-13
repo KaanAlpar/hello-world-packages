@@ -7,6 +7,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
+        <div id="company-name">
+          <li>
+            <i class="fas fa-globe-europe"></i>
+            Hello World!
+          </li>
+        </div>
         <li class="nav-item active">
           <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
