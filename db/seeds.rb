@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Make 10 users
+User.destroy_all
 puts "Making 10 users..."
 10.times do
   first_name = Faker::Name.first_name
@@ -21,22 +22,27 @@ puts "Finished making users..."
 Package.destroy_all
 
 # Make 20 packages, 2 for each user
-puts "Making 20 packages..."
+puts "Making 5 packages for each user..."
 User.all.each do |user|
-  2.times do
-   package = Package.new(user: user, name: Faker::Movies::HarryPotter.spell, price: (1..10).to_a.sample, origin: Faker::Address.country, description: Faker::Movies::HarryPotter.quote)
-   package.save!
-   p package
+  (1..3).to_a.sample.times do
+    origin = Faker::Address.country
+    name = "#{origin} Package"
+    description = "This wonderful package from #{origin} contains several original snacks"
+    package = Package.new(user: user, name: name, price: (1..99).to_a.sample, origin: origin, description: description)
+    package.remote_photo_url = "https://source.unsplash.com/1920x1080/?food"
+    package.save!
+    p package
   end
 end
 puts "Finished making packages..."
 
 # Make 60 items, 3 for each package
 
-puts "Making items..."
+puts "Making 3 to 6 items for each package..."
 Package.all.each do |package|
-  (3..6).to_a.sample.times do
+  (2..4).to_a.sample.times do
     item = Item.new(package: package, name: Faker::Food.ingredient)
+    item.remote_photo_url = "https://source.unsplash.com/500x500/?ingredient"
     item.save!
     p item
   end
@@ -44,16 +50,16 @@ end
 puts "Finished making items..."
 
 # Add images
-puts "Adding images to packages"
-Package.all.each do |p|
-  p.remote_photo_url = "https://source.unsplash.com/1080/?package,food"
-  p.save!
-end
+# puts "Adding images to packages"
+# Package.all.each do |p|
+#   p.remote_photo_url = "https://source.unsplash.com/1080/?package,food"
+#   p.save!
+# end
 
-puts "Adding images to items"
-Package.all.each do |p|
-  p.items.each do |i|
-    i.remote_photo_url = "https://source.unsplash.com/500x500/?nature,water"
-    i.save!
-  end
-end
+# puts "Adding images to items"
+# Package.all.each do |p|
+#   p.items.each do |i|
+#     i.remote_photo_url = "https://source.unsplash.com/500x500/?nature,water"
+#     i.save!
+#   end
+# end
