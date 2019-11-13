@@ -8,10 +8,14 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <div id="company-name">
-          <li>
-            <i class="fas fa-globe-europe"></i>
-            Hello World!
-          </li>
+          <div class="company-name">
+            <li>
+              <%= link_to root_path, class: "nav-link" do %>
+                <i class="fas fa-globe-europe"></i>
+                Hello World!
+              <% end %>
+            </li>
+          </div>
         </div>
         <li class="nav-item active">
           <%= link_to "Home", root_path, class: "nav-link" %>
@@ -27,10 +31,12 @@
           </div>
         </li>
       <% else %>
-          <div id="company-name">
+          <div class="company-name">
             <li>
-              <i class="fas fa-globe-europe"></i>
-              Hello World!
+              <%= link_to root_path, class: "nav-link" do %>
+                <i class="fas fa-globe-europe"></i>
+                Hello World!
+              <% end %>
             </li>
           </div>
         <li class="nav-item">
