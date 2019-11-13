@@ -6,11 +6,11 @@
         <h2>My Packages</h2>
           <ul class="list-group">
             <% current_user.packages.each do |package| %>
+              <%= link_to package_path(package), class: 'text-decoration-none' do %>
               <li class="my-packages-orders">
-                <%= link_to package_path(package) do %>
                   <%= package.name %>
-                <% end %>
               </li>
+              <% end %>
             <% end %>
           </ul>
           <%= link_to 'Add Package', new_package_path, class: 'button' %>

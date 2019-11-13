@@ -9,7 +9,7 @@
     </div>
     <div class="col-sm-3">
       <div class="d-flex flex-column align-items-center">
-        <h2 class="p-3">Price: <%= @package.price %></h2>
+        <h2 class="p-3">Price: $<%= @package.price %></h2>
         <% if @package.user == current_user %>
           <%= link_to 'Add item', new_package_item_path(@package), class: 'button' %>
         <% else %>
