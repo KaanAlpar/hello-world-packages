@@ -1,15 +1,26 @@
+<div class="background-primary">
 <div class="container">
-  <% if @packages.count == 1 %>
-    <h1> <%= @packages.count %> result for <%= @search_country %> </h1>
-  <% else %>
-    <h1> <%= @packages.count %> results for <%= @search_country %> </h1>
-  <% end %>
-  <div class="row">
-    <% @packages.each do |package| %>
-      <div class="card-package">
-        <%= cl_image_tag(package.photo, width: 400, height: 300, crop: :fill) %>
-        <h2> <%= package.name %> </h2>
-      </div>
+  <div class="my-5">
+    <% if @packages.count == 1 %>
+      <h1> <%= @packages.count %> result for <%= @search_country %> </h1>
+    <% else %>
+      <h1> <%= @packages.count %> results for <%= @search_country %> </h1>
     <% end %>
   </div>
+  <div class="row">
+    <% @packages.each do |package| %>
+      <%= link_to package_path(package), class: 'text-decoration-none' do  %>
+        <div class="card-package">
+          <div>
+            <%= cl_image_tag(package.photo, width: 280, height: 160, crop: :fill) %>
+          </div>
+          <div class="d-flex flex-column justify-content-between py-3">
+            <h2> <%= package.name %> </h2>
+            <p>price: <%= package.price %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 </div>
