@@ -1,3 +1,7 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @package.photo, height: 300, width: 1920, crop: :fill %>');">
+<% if @package.photo.file %>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @package.photo, height: 300, width: 1920, crop: :fill %>');">
+<% else %>
+  <div class="banner">
+<% end %>
   <h1 class="text-center"><%= @package.name %></h1>
 </div>
