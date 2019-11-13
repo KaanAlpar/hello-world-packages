@@ -2,7 +2,7 @@
   <div class="pink-search-bar">
     <div class="d-flex flex-column align-items-start mb-3">
       <h2>pick the package origin:</h2>
-      <%= simple_form_for :search, url: root_path, html: { class: 'form-inline' } do |f| %>
+      <%= simple_form_for :search, url: packages_path, method: :get, html: { class: 'form-inline' } do |f| %>
       <%= f.input :countries, collection: @countries, label: false %>
       <%= f.submit "Search", class: "btn btn-primary" %>
       <% end %>
