@@ -1,0 +1,15 @@
+<div class="background-primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <%= link_to package_path(@package), class: 'text-decoration-none' do %>
+          <div class="card bg-success p-5">
+            Order complete, an email containing the details has been sent to you.
+          </div>
+          <span class="button">Back</span>
+        <% end %>
+      </div>
+    </div>
+    <div class="my-5"></div>
+  </div>
+</div>
