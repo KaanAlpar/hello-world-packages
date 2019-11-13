@@ -3,10 +3,10 @@
     <div class="card-product d-flex justify-content-center">
     <div class="user_card" style= "height: 600px; width: 600px;">
         <%= simple_form_for @package do |f| %>
-          <strong><%= f.input :name %></strong>
-          <strong><%= f.input :price %></strong>
-          <strong><%= f.input :origin %></strong>
-          <strong><%= f.input :description, as: :text %></strong>
+          <strong><%= f.input :name, placeholder: 'My awesome package'%></strong>
+          <strong><%= f.input :price, placeholder: '$999' %></strong>
+          <strong><%= f.input :origin, placeholder: 'South Korea'%></strong>
+          <strong><%= f.input :description, as: :text, placeholder: 'Your description goes here, try to explain whats included in the package' %></strong>
           <strong><%= f.input :photo %></strong>
           <strong><%= f.input :photo_cache, as: :hidden %></strong>
           <%= f.button :submit, value: "add", class: 'button' %>
