@@ -5,7 +5,7 @@
         <%= simple_form_for @package do |f| %>
           <strong><%= f.input :name %></strong>
           <strong><%= f.input :price %></strong>
-          <strong><%= f.input :origin, collection: ["Turkey", "India", "Brazil", "France"]  %></strong>
+          <strong><%= f.input :origin, collection: @countries  %></strong>
           <strong><%= f.input :description %></strong>
           <strong><%= f.input :photo %></strong>
           <strong><%= f.input :photo_cache, as: :hidden %></strong>

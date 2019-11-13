@@ -6,6 +6,7 @@ class PackagesController < ApplicationController
 
   def new
     @package = Package.new
+    @countries = Package.select(:origin).distinct.pluck(:origin)
   end
 
   def create
