@@ -1,0 +1,9 @@
+<div class="pink-search-bar">
+  <div class="d-flex flex-column align-items-center mb-3">
+    <h2>search for a package:</h2>
+    <%= simple_form_for :search, url: packages_path, method: :get, html: { class: 'form-inline' } do |f| %>
+      <%= f.input :countries, collection: @countries, label: false, input_html: {class: 'select2'} %>
+      <%= f.submit "Search", class: "button" %>
+    <% end %>
+  </div>
+</div>

@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
 
   def home
-    @countries = Package.select(:origin).distinct.pluck(:origin).sort
+    @countries = ISO3166::Country.all.map {|country| country.name}.sort
   end
 
   def order_confirmed
