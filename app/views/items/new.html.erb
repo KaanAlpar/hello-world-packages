@@ -4,8 +4,11 @@
     <div class="user_card">
      <!-- <h2>Add item to: <%#= @package.name %></h2> -->
        <%= simple_form_for [@package, @item] do |f| %>
-         <%= f.input :name %>
-         <%= f.input :photo %>
+         <%= label_tag :name %>
+         <%= f.input :name, label: false %>
+
+         <%= label_tag :photo %>
+         <%= f.input :photo, label: false %>
          <%= f.input :photo_cache, as: :hidden %>
          <%= f.button :submit, class: 'button', value: 'add' %>
        <% end %>

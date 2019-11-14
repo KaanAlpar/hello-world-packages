@@ -3,17 +3,18 @@
     <div class="card-product d-flex justify-content-center">
       <div class="user_card">
         <%= simple_form_for @package do |f| %>
-          <%= f.label :name, class: 'font-weight-bold' %>
+          <%#= f.label :name, class: 'font-weight-bold' %>
+          <%= label_tag :name %>
           <%= f.input :name, placeholder: 'My awesome package', label: false%>
 
-          <%= f.label :price, class: 'font-weight-bold' %>
+          <%= label_tag :price %>
           <%= f.input :price, placeholder: '$999', label: false %>
 
-          <%= f.label :origin, class: 'font-weight-bold' %>
+          <%= label_tag :origin %>
           <%#= f.input :origin, placeholder: 'South Korea', label: false%>
-          <%= f.input :origin, collection: @countries, label: false, input_html: {class: 'select2'} %>
+          <%= f.input :origin, collection: @countries, label: false, input_html: {class: 'select2'}, selected: ' ' %>
 
-          <%= f.label :description, class: 'font-weight-bold' %>
+          <%= label_tag :description %>
           <%= f.input :description, as: :text, placeholder: 'Your description goes here, try to explain whats included in the package', label: false %>
 
           <%= f.button :submit, value: "add", class: 'button' %>
