@@ -1,5 +1,5 @@
 .row {
-  justify-content: center;
+  justify-content: start;
 }
 
 .card-container {
@@ -7,10 +7,29 @@
 }
 
 .card-package {
-  padding: 10px;
+  border-color: black;
+  padding: 5px;
   margin: 8px;
   color: #5E5757;
-  font-size: 24px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-size: 18px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.card-package h3 {
+  color: #616161;
+  font-size: 22px;
+  text-align: left;
+}
+
+
+.card-package p {
+  color: black;
+  font-weight: bold;
+  text-align: left;
+}
+
+.card-package:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  border-color: blue;
+  transition: 0.2s;
 }
