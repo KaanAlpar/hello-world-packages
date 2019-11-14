@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show
     @user = current_user
-    @countries = Package.select(:origin).distinct.pluck(:origin).sort
+    @countries = ISO3166::Country.all.map { |country| country.name }.sort
   end
 end
