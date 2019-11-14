@@ -1,6 +1,7 @@
 // use for My Orders, My Packages, Add Orders, Add Packages
 .user_card {
-  background-color: #FFECD3;
+  background-color: #f7f7f7;
+  color: white;
   padding: 30px;
   margin: 20px;
   overflow: hidden;
@@ -10,7 +11,38 @@
   align-items: top;
   justify-content: center;
   text-align: center;
+  position: relative;
 }
 
 .user_card h2 {
+  font-family: "Overpass", sans-serif;
+  background-color: #e5d0e3;
+  width: 500px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+}
+
+.background-primary.dashboard-container {
+  padding: 24px;
+}
+
+#dashboard-title {
+  margin: 0;
+  padding: 8px;
+  color: #5A58A3;
+  font-family: "Overpass", sans-serif;
+}
+
+.list-group li {
+  color: #5A58A3;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  margin-top: 4px;
+}
+
+.list-group {
+  margin-top: 32px;
 }
