@@ -5,17 +5,17 @@
         <%= simple_form_for @package do |f| %>
           <%#= f.label :name, class: 'font-weight-bold' %>
           <%= label_tag :name %>
-          <%= f.input :name, placeholder: 'My awesome package', label: false%>
+          <%= f.input :name, label: false%>
 
           <%= label_tag :price %>
-          <%= f.input :price, placeholder: '$999', label: false %>
+          <%= f.input :price, label: false %>
 
           <%= label_tag :origin %>
           <%#= f.input :origin, placeholder: 'South Korea', label: false%>
           <%= f.input :origin, collection: @countries, label: false, input_html: {class: 'select2'}, selected: ' ' %>
 
           <%= label_tag :description %>
-          <%= f.input :description, as: :text, placeholder: 'Your description goes here, try to explain whats included in the package', label: false %>
+          <%= f.input :description, as: :text, label: false %>
 
           <%= f.button :submit, value: "add", class: 'button' %>
         <% end %>
