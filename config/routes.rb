@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get '/dashboard', to: 'users#show', as: 'dashboard'
+  get '/my-orders/:id', to: 'orders#show', as: 'order'
 
   resources :packages, only: [:index, :show, :new, :create] do
     resources :orders, only: [:create]
