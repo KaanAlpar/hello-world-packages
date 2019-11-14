@@ -1,14 +1,17 @@
-<div class="background-primary">
-  <h1>add item</h1>
-  <div class="card-product d-flex justify-content-center">
-    <div class="user_card" style= "height: 600px; width: 600px;">
-     <h2>Add item to: <%= @package.name %></h2>
-         <%= simple_form_for [@package, @item] do |f| %>
-           <%= f.input :name %>
-           <%= f.input :photo %>
-           <%= f.input :photo_cache, as: :hidden %>
-           <%= f.button :submit, class: 'button' %>
-         <% end %>
+<div class="primary-background p-3">
+  <h1 class="text-center">add item</h1>
+  <div class="d-flex justify-content-center">
+    <div class="user_card">
+     <!-- <h2>Add item to: <%#= @package.name %></h2> -->
+       <%= simple_form_for [@package, @item] do |f| %>
+         <%= f.input :name %>
+         <%= f.input :photo %>
+         <%= f.input :photo_cache, as: :hidden %>
+         <%= f.button :submit, class: 'button', value: 'add' %>
+       <% end %>
+       <%= link_to package_path(@package), class: 'button-flat text-decoration-none' do %>
+        Cancel
+       <% end %>
      </div>
    </div>
 </div>

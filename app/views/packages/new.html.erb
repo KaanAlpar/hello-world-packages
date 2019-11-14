@@ -1,7 +1,7 @@
   <div class="background-primary">
-  <h1>add package</h1>
+    <h1>add package</h1>
     <div class="card-product d-flex justify-content-center">
-    <div class="user_card" style= "height: 600px; width: 600px;">
+      <div class="user_card">
         <%= simple_form_for @package do |f| %>
           <%= f.label :name, class: 'font-weight-bold' %>
           <%= f.input :name, placeholder: 'My awesome package', label: false%>
@@ -18,13 +18,16 @@
 
           <%= f.button :submit, value: "add", class: 'button' %>
         <% end %>
-    </div>
+        <%= link_to dashboard_path, class: 'button-flat text-decoration-none' do %>
+          Cancel
+        <% end %>
+      </div>
   </div>
 
-  <div class="row justify-content-between m-3">
-    <%= link_to '/dashboard', class: "cancel-button" do %>
+<!--   <div class="row justify-content-between m-3">
+    <%#= link_to '/dashboard', class: "cancel-button" do %>
       Cancel
-    <% end %>
+    <%# end %> -->
     <!-- cancel button leads back to dashboard -->
   </div>
   </div>
