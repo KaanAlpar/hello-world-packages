@@ -1,7 +1,8 @@
 .landing-page-card {
-  background-color: #C3C3E5;
+  background-color: #534E6B;
   color: white;
-  padding: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin: 60px;
   overflow: hidden;
   height: 380px;
@@ -23,4 +24,8 @@
   font-family: 'Nunito', sans-serif;
   font-weight: bold;
   font-size: 35px;
+}
+
+.landing-page-card p {
+  font-size: 25px;
 }
