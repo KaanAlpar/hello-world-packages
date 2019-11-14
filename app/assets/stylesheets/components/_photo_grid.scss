@@ -7,21 +7,27 @@
 }
 
 .container {
-  padding: 8px;
+  padding: 1px;
 }
 
 .photo-grid {
   display: flex;
-  width: 416px;
-  height: 316px;
+  width: 290px;
+  height: 250px;
   flex-wrap: wrap;
+  text-align: start;
+  padding: 10px;
+  grid-gap: 8px;
+
+  border-color: black;
+  border-radius: 5px;
 }
 
 .photo-grid img {
-  width: 200px;
-  height: 150px;
+  width: 130px;
+  height: 110px;
   object-fit: cover;
-  margin: 4px;
+  margin: 2px;
 }
 
 .container h1 {
