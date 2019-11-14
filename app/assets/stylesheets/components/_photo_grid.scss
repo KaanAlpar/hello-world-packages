@@ -1,0 +1,25 @@
+.background-primary {
+  padding: 0;
+}
+
+.card-container a {
+  color: black;
+}
+
+.container {
+  padding: 8px;
+}
+
+.photo-grid {
+  display: flex;
+  width: 456px;
+  height: 456px;
+  flex-wrap: wrap;
+}
+
+.photo-grid img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  margin: 4px;
+}
