@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get '/dashboard', to: 'users#show', as: 'dashboard'
   get '/my-orders/:id', to: 'orders#show', as: 'order'
+  get '/orders', to: 'orders#index', as: 'orders'
 
   resources :packages, only: [:index, :show, :new, :create] do
     resources :orders, only: [:create]
