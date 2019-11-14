@@ -8,6 +8,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     @item.package = @package
+    # @item.remote_photo_url = "https://source.unsplash.com/500x500/?ingredient" if @item.photo.nil?
     if @item.save
       redirect_to package_path(params[:package_id])
     else
