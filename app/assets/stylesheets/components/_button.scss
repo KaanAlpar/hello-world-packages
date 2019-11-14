@@ -25,3 +25,25 @@
   text-align: center;
   text-decoration: none;
 }
+
+.button-search {
+  height: 50px;
+  width: 150px;
+  background-color: #5A77A3;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 2px;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+
+  &:hover {
+    text-decoration: none;
+    background-color: #7398ce;
+    color: white;
+  }
+}
