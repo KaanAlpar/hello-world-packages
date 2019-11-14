@@ -1,4 +1,4 @@
-.landing-page-card {
+.landing-page-card-bottom {
   background-color: #5A58A3;
   text-align: center;
   color: white;
@@ -6,10 +6,10 @@
   font-size: 20px;
   padding: 20px;
   padding-top: 30px;
-  margin: 150px;
+  margin: 50px 10px;
   overflow: hidden;
-  height: 250px;
-  width: 600px;
+  // height: 250px;
+  width: 100%;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -21,4 +21,30 @@
 
 .background-primary h4 {
   padding: 20px;
+}
+
+.landing-page-card {
+  background-color: #5A58A3;
+  text-align: center;
+  color: white;
+  text-shadow: 0.1px 0.1px 1px #c1c1c1;
+  font-size: 20px;
+  padding: 20px;
+  padding-top: 30px;
+  margin: 50px;
+  overflow: hidden;
+  // height: 250px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-around;
+  p {
+    padding: 30px;
+  }
+}
+
+.truck-icon {
+
+  margin: 70px 0px 70px 40px;
 }
