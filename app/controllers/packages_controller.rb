@@ -4,23 +4,23 @@ class PackagesController < ApplicationController
     @search_country = params[:search][:countries]
   end
 
+  def my_packages
+    @packages = Package.where(user: current_user)
+  end
+
   def show
     @package = Package.find(params[:id])
   end
 
   def new
     @package = Package.new
-    # @countries = Package.select(:origin).distinct.pluck(:origin).sort
+    @countries = ISO3166::Country.all.map { |country| country.name }.sort
   end
 
   def create
     @package = Package.new(package_params) # strong params!
-    array = @package.name.split(' ')
-    new_name = array.map do |name|
-      name.capitalize!
-    end.join(' ')
-    @package.name = new_name
     @package.user = current_user
+    # raise
     if @package.save
       redirect_to package_path(@package)
     else
@@ -32,6 +32,6 @@ class PackagesController < ApplicationController
   private
 
   def package_params
-    params.require(:package).permit(:name, :price, :origin, :photo)
+    params.require(:package).permit(:name, :price, :origin, :photo, :description)
   end
 end
