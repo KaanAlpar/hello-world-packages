@@ -4,6 +4,10 @@ class PackagesController < ApplicationController
     @search_country = params[:search][:countries]
   end
 
+  def my_packages
+    @packages = Package.where(user: current_user)
+  end
+
   def show
     @package = Package.find(params[:id])
   end

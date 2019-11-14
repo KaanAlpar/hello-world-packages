@@ -1,18 +1,19 @@
 <div class="primary-background">
   <div class="container">
-    <h1 class="text-center">All orders</h1>
+    <h1 class="text-center">My packages</h1>
     <ul class="list-group">
-        <% @orders.each do |order| %>
-          <%= link_to order_path(order), class: 'text-decoration-none' do %>
+        <% @packages.each do |package| %>
+          <%= link_to package_path(package), class: 'text-decoration-none' do %>
             <li class="list-group-item list-group-item-warning p-2 my-1 d-flex justify-content-between">
-              <p><%= order.package.name %></p>
-              <p><%= order.created_at.strftime("%A, %b %d") %></p>
+              <p><%= package.name %></p>
+              <p>Last edited: <%= package.updated_at.strftime("%A, %b %d") %></p>
             </li>
           <% end %>
         <% end %>
     </ul>
     <%= link_to dashboard_path, class: 'button' do  %>
-      Dashboard
+      Go back to dashboard
     <% end %>
   </div>
 </div>
+
