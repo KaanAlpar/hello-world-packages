@@ -5,29 +5,50 @@
     </div>
     <%= render 'shared/search_form' %>
   </div>
-</div>
-  <div class="background-primary">
-     <h1> Hello World: What is a package?</h1>
-      <h3>A package can consist of food, snacks or candies from a country of origin.<h3>
-        <h3> A popular Turkish package may consist of Baklava, Turkish delight and maybe even Turkish tea bags.</h3>
-   <div class="card-product d-flex justify-content-center">
-      <div class="landing-page-card">
-        <div>
-          <h2>1. Choose the origin</h2>
-            <p> Use the dropdown list on the top of this page. Pick from our carefully selected list of package origins. Click on "Search" to find out. There is a package for everyone!</p>
+  </div>
+    <div class="background-primary p-5">
+     <div class="card-product d-flex justify-content-center">
+      <%= link_to '#origin' do %>
+        <div class="landing-page-circle">
+          <div>
+            <h2>1. choose the origin</h2>
+          </div>
         </div>
-      </div>
-      <div class="landing-page-card">
-        <div>
-          <h2>2. See the results</h2>
-            <p> Browse through the packages and choose the package of your liking! Our result page will only show packages from the origin you chose. Give it a try!</p>
+        <% end %>
+        <div class="landing-page-circle">
+          <div>
+            <h2>2. see the results</h2>
+          </div>
         </div>
-      </div>
-      <div class="landing-page-card">
-        <div>
-          <h2>3. Place your order</h2>
-            <p> View a detailed description of the package and place your order if you like it. Check out all the available items in display. Go for it! </p>
+        <div class="landing-page-circle">
+          <div>
+            <h2>3. place your order</h2>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+       <div class="card-product d-flex justify-content-start" style="background-image: linear-gradient(-120deg, rgba(90,88,163,0.2) 0%, rgba(90,88,163,0.5) 50%), url('<%= image_path 'flags.jpg' %>');" id="origin">
+          <div class="landing-page-card pink-bg text-grey">
+            <div>
+              <h2>Choose the Origin</h2>
+                <p> Use the dropdown list on the top of this page. Pick from vast list of package origins. Click on the "search" button to find out how many packages are available. There is a package for everyone!</p>
+            </div>
+          </div>
+        </div>
+          <div class="card-product d-flex justify-content-end" style="background-image: linear-gradient(-120deg, rgba(232,187,191,0.5) 0%, rgba(232,187,191,0.1) 80%), url('<%= image_path 'candy.jpg' %>');">
+            <div class="landing-page-card" id="results">
+             <div>
+               <h2>See the results</h2>
+                  <p> Browse through the packages and choose the package of your liking. Use the package thumbnail to preview what items are available within. Give it a try!</p>
+              </div>
+            </div>
+          </div>
+        <div class="background-primary p-5 d-flex">
+          <div class="landing-page-card" id="order">
+            <div>
+              <h2>Place your order</h2>
+                <p> View a detailed description of the package and place your order if you like it. Check out all the available items in display. Go for it! </p>
+            </div>
+          </div>
+          <%= image_tag "delivery.png", alt: "alttext", width:"800px" %>
+        </div>
