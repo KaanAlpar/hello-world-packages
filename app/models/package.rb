@@ -7,4 +7,15 @@ class Package < ApplicationRecord
   validates :origin, presence: true
   validates :description, presence: true
   mount_uploader :photo, PhotoUploader
+  before_save :capitalize_name
+
+  private
+
+  def capitalize_name
+    words = name.split(' ')
+    new_name = words.map do |name|
+      name.capitalize
+    end.join(' ')
+    self.name = new_name
+  end
 end
