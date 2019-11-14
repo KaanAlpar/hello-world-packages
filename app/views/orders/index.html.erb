@@ -1,8 +1,8 @@
-<div class="primary-background">
+<div class="primary-background py-5">
   <div class="container">
-    <h1 class="text-center">All orders</h1>
+    <h1 class="text-center mb-3">All orders</h1>
     <ul class="list-group">
-        <% @orders.each do |order| %>
+        <% @orders.reverse.each do |order| %>
           <%= link_to order_path(order), class: 'text-decoration-none' do %>
             <li class="list-group-item list-group-item-warning p-2 my-1 d-flex justify-content-between">
               <p><%= order.package.name %></p>

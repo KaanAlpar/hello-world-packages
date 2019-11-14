@@ -21,7 +21,7 @@
       <div>
         <h2>My Orders</h2>
         <ul class="list-group">
-          <% current_user.orders.first(4).each do |order| %>
+          <% current_user.orders.reverse.first(4).each do |order| %>
             <%= link_to order_path(order), class: 'text-decoration-none' do %>
               <li class="my-packages-orders">
                 <%= order.package.name %>
