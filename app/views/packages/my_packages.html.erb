@@ -6,13 +6,16 @@
           <%= link_to package_path(package), class: 'text-decoration-none' do %>
             <li class="list-group-item list-group-item-warning p-2 my-1 d-flex justify-content-between">
               <p><%= package.name %></p>
-              <p>Last edited: <%= package.updated_at.strftime("%A, %b %d") %></p>
+              <p>Last updated: <%= package.updated_at.strftime("%A, %b %d") %></p>
             </li>
           <% end %>
         <% end %>
     </ul>
     <%= link_to dashboard_path, class: 'button' do  %>
-      Go back to dashboard
+      Dashboard
+    <% end %>
+    <%= link_to new_package_path, class: 'button' do  %>
+      Add package
     <% end %>
   </div>
 </div>
