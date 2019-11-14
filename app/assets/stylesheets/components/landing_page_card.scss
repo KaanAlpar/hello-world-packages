@@ -1,12 +1,14 @@
 .landing-page-card {
-  background-color: #534E6B;
+  background-color: #5A58A3;
+  text-align: center;
   color: white;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin: 60px;
+  text-shadow: 0.1px 0.1px 1px #c1c1c1;
+  font-size: 20px;
+  padding: 20px;
+  margin: 100px;
   overflow: hidden;
-  height: 380px;
-  width: 500px;
+  height: 250px;
+  width: 600px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -18,14 +20,4 @@
 
 .background-primary h4 {
   padding: 20px;
-}
-
-.landing-page-card h2 {
-  font-family: 'Nunito', sans-serif;
-  font-weight: bold;
-  font-size: 35px;
-}
-
-.landing-page-card p {
-  font-size: 25px;
 }

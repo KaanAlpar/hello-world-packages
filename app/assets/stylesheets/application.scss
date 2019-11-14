@@ -13,6 +13,10 @@
 @import "components/index";
 @import "pages/index";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding-top: 50px;
 }
@@ -24,4 +28,12 @@ h2 {
 
 h3 {
   font-family: 'Libre Franklin';
+}
+
+.pink-bg {
+  background-color: #FEC8C8;
+}
+
+.text-grey {
+  color: #2d2d2d;
 }
