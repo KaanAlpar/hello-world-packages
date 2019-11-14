@@ -1,11 +1,11 @@
 class Package < ApplicationRecord
   include AlgoliaSearch
 
-  algoliasearch do
-    attribute :name, :origin
+  # algoliasearch do
+  #   attribute :name, :origin
 
-    searchableAttributes ['origin', 'name']
-  end
+  #   searchableAttributes ['origin', 'name']
+  # end
 
   has_many :items, dependent: :destroy
   has_many :orders, dependent: :destroy
