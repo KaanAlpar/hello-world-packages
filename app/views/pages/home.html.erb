@@ -3,15 +3,7 @@
     <div>
       <h1>Experience sweets from all around the world</h1>
     </div>
-    <div class="pink-search-bar">
-      <div class="d-flex flex-column align-items-center mb-3">
-        <h2 class="mb-3">pick a country:</h2>
-        <%= simple_form_for :search, url: packages_path, method: :get do |f| %>
-        <%= f.input :countries, collection: @countries, label: false %>
-        <%= f.submit "Search", class: "button" %>
-        <% end %>
-      </div>
-    </div>
+    <%= render 'shared/search_form' %>
   </div>
 </div>
   <div class="background-primary">
