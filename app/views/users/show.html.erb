@@ -5,7 +5,7 @@
       <div>
         <h2>My Packages</h2>
           <ul class="list-group">
-            <% current_user.packages.each do |package| %>
+            <% current_user.packages.first(4).each do |package| %>
               <%= link_to package_path(package), class: 'text-decoration-none' do %>
               <li class="my-packages-orders">
                   <%= package.name %>
@@ -13,6 +13,7 @@
               <% end %>
             <% end %>
           </ul>
+          <%= link_to 'See all packages', my_packages_path, class: 'button' %>
           <%= link_to 'Add Package', new_package_path, class: 'button' %>
         </div>
     </div>
@@ -20,7 +21,7 @@
       <div>
         <h2>My Orders</h2>
         <ul class="list-group">
-          <% current_user.orders.each do |order| %>
+          <% current_user.orders.first(4).each do |order| %>
             <%= link_to order_path(order), class: 'text-decoration-none' do %>
               <li class="my-packages-orders">
                 <%= order.package.name %>
@@ -28,10 +29,11 @@
             <% end %>
           <% end %>
         </ul>
+        <%= link_to 'See More', orders_path, class: 'button' %>
       </div>
     </div>
   </div>
-  <div class="card-product d-flex justify-content-center">
+  <div class="card-product d-flex justify-content-center pb-5">
     <%= render 'shared/search_form' %>
   </div>
 </div>

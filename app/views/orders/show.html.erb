@@ -2,10 +2,13 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-sm-6">
-        <h1>You ordered <em><%= @order.package.name %></em> on <%= @order.created_at.strftime("%A, %b %d") %></h1>
-        <%= link_to dashboard_path, class: 'button' do  %>
-          Back
-        <% end %>
+        <h1>You ordered <%= @order.package.name %> on <%= @order.created_at.strftime("%A, %b %d") %></h1>
+          <%= link_to orders_path, class: 'button' do  %>
+            See all orders
+          <% end %>
+          <%= link_to dashboard_path, class: 'button' do  %>
+            Go back to dashboard
+          <% end %>
       </div>
     </div>
   </div>

@@ -1,5 +1,9 @@
 class OrdersController < ApplicationController
-  before_action :set_order
+  before_action :set_order, only: [:show]
+
+  def index
+    @orders = Order.where(user: current_user)
+  end
 
   def create
     @order = Order.new # strong params!(?)
