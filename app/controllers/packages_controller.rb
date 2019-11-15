@@ -20,12 +20,10 @@ class PackagesController < ApplicationController
   def create
     @package = Package.new(package_params) # strong params!
     @package.user = current_user
-    # raise
     if @package.save
       redirect_to package_path(@package)
     else
-      # redirect_to new_package_path
-      render :new # new.html.erb
+      render :new
     end
   end
 

@@ -8,6 +8,7 @@ gem 'puma'
 gem 'rails', '5.2.3'
 gem 'redis'
 
+gem "algoliasearch-rails"
 gem 'autoprefixer-rails'
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary', '~> 1.9.1'
