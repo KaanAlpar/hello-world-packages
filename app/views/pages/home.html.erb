@@ -3,9 +3,7 @@
     <div>
       <h1>Experience sweets from all around the world</h1>
     </div>
-    <div class="d-flex align-items-center justify-content-center w-100">
-      <%= render 'shared/search_form' %>
-    </div>
+    <%= render 'shared/search_form', countries: @countries %>
   </div>
 </div>
 <div class="background-primary p-5 blue-bg">
@@ -16,18 +14,19 @@
       <h2>1. choose the origin</h2>
     </div>
   </div>
+<<<<<<< HEAD
   <% end %>
   <%= link_to '#results' do %>
   <div class="my-4 m-md-0 mx-md-2 landing-page-circle">
     <div>
-      <h2>2.<br>see the results</h2>
+      <h2>2.<br>See the packages</h2>
     </div>
   </div>
   <% end %>
   <%= link_to '#order' do %>
   <div class="my-4 m-md-0 mx-md-2 landing-page-circle">
     <div>
-      <h2>3.<br>place your order</h2>
+      <h2>3.<br>Place your order</h2>
     </div>
   </div>
   <% end %>
@@ -36,23 +35,23 @@
 <div class="card-product d-flex justify-content-start" style="background-image: linear-gradient(-120deg, rgba(90,88,163,0.2) 0%, rgba(90,88,163,0.5) 50%), url('<%= image_path 'flags.jpg' %>');" id="origin">
   <div class="col col-md-5 landing-page-card pink-bg text-grey">
     <div>
-      <h2>Choose the Origin</h2>
-      <p> Use the dropdown list on the top of this page. Pick from vast list of package origins. Click on the "search" button to find out how many packages are available. There is a package for everyone!</p>
+      <h2>Choose a country</h2>
+      <p> Use the dropdown list above to choose a country. Click "Search" to then see our packages. We have something for everyone!</p>
     </div>
   </div>
 </div>
 <div class="card-product d-flex justify-content-end" style="background-image: linear-gradient(-120deg, rgba(232,187,191,0.5) 0%, rgba(232,187,191,0.1) 80%), url('<%= image_path 'candy.jpg' %>');" id="results">
   <div class="col col-md-5 landing-page-card">
    <div>
-     <h2>See the results</h2>
-     <p> Browse through the packages and choose the package of your liking. Use the package thumbnail to preview what items are available within. Give it a try!</p>
+     <h2>See the packages</h2>
+     <p> Look through the packages and choose one you like! Results only show packages from the country you chose.</p>
    </div>
  </div>
 </div>
 <div class="background-primary blue-bg d-flex justify-content-around align-items-center flex-wrap" id="order">
   <div class="landing-page-card-bottom">
     <h2>Place your order</h2>
-    <p> View a detailed description of the package and place your order if you like it. Check out all the available items in display. Go for it! </p>
+    <p> View the package's details and items and order if you like!</p>
   </div>
   <div class="truck-icon">
     <%= image_tag "delivery.png", alt: "alttext", width: "400px" %>
