@@ -1,8 +1,11 @@
 .navbar-lewagon {
   justify-content: flex-end;
-  background: #FAC5C5;
+  background: rgba(0, 0, 0, 0);
   padding-bottom: 18px;
+  transition: 0.5s background-color ease;
+  transition: 0.5s color ease;
 }
+
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -18,8 +21,8 @@
 }
 
 .navbar-light .navbar-nav .nav-link:hover,  .navbar-light .navbar-nav .active > .nav-link:hover {
-  background-color:white;
-  color: #FAC5C5;
+  background-color: #5a77a3;
+  color: white;
   border-radius: 8px;
 }
 
@@ -27,11 +30,20 @@
   color: white;
   font-size: 28px;
   font-family: 'Gochi Hand', cursive;
-  position:absolute;
+  position: absolute;
   top: 5px;
   left: 10px;
 }
 
 .company-name li {
   display: flex;
+}
+
+.navbar-lewagon-white {
+  background-color: white;
+
+}
+
+.navbar-lewagon-white.navbar .navbar-nav .nav-link {
+  color: #4c6a84 ;
 }
