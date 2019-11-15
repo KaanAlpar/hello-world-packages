@@ -47,3 +47,11 @@
     color: white;
   }
 }
+
+.button-flat {
+  background-color: #FAC5C5;
+  border-radius: 4px;
+  &:hover {
+    background-color: #ffaaaa;
+  }
+}

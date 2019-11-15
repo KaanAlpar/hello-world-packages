@@ -1,7 +1,6 @@
 // use for My Orders, My Packages, Add Orders, Add Packages
 .user_card {
   background-color: #f7f7f7;
-  color: white;
   padding: 30px;
   margin: 20px;
   overflow: hidden;
@@ -12,6 +11,9 @@
   justify-content: center;
   text-align: center;
   position: relative;
+  h2, a {
+    color: white;
+  }
 }
 
 .user_card h2 {
