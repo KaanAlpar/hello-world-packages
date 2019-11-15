@@ -1,11 +1,7 @@
 <div class="landing-page-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 20%), url('<%= image_path 'landing_page_banner.jpg' %>');">
-  <div class="row">
-    <div class="col-12">
-      <h1>Experience sweets from all around the world</h1>
-    </div>
-    <div class="col-12">
-      <%= render 'shared/search_form', countries: @countries %>
-    </div>
+  <div class="text-center">
+    <h1>Experience sweets from all around the world</h1>
+    <%= render 'shared/search_form', countries: @countries %>
   </div>
 </div>
 <div class="background-primary p-5 blue-bg">
@@ -17,7 +13,7 @@
     </div>
   </div>
   <% end %>
-  <%= link_to '#results' do %>
+  <%= link_to '#results-down' do %>
   <div class="my-4 m-md-0 mx-md-2 landing-page-circle">
     <div>
       <h2>2.<br>See the packages</h2>
@@ -41,7 +37,7 @@
     </div>
   </div>
 </div>
-<div class="card-product d-flex justify-content-end" style="background-image: linear-gradient(-120deg, rgba(232,187,191,0.5) 0%, rgba(232,187,191,0.1) 80%), url('<%= image_path 'candy.jpg' %>');" id="results">
+<div class="card-product d-flex justify-content-end" style="background-image: linear-gradient(-120deg, rgba(232,187,191,0.5) 0%, rgba(232,187,191,0.1) 80%), url('<%= image_path 'candy.jpg' %>');" id="results-down">
   <div class="col col-md-5 landing-page-card">
    <div>
      <h2>See the packages</h2>
