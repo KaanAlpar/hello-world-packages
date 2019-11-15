@@ -1,11 +1,11 @@
 .pink-search-bar {
-  background-color: #FEC8C8;
+  // background-color: #FEC8C8;
   color: white;
   text-shadow: 1px 1px 1px #000000;
-  padding: 20px;
+  // padding: 20px;
   margin-top: 60px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // border-radius: 10px;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   opacity: 0.90;
 }
 
@@ -15,10 +15,17 @@
 
 #results {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#results a {
+  text-decoration: none;
+  color: #141414;
 }
 
 #results .results-list-item {
-  padding: 8px 16px;
-  background: red;
+  background: #f3f3f3;
+  border-bottom: 1px solid #e8e8e8;
 }
 
