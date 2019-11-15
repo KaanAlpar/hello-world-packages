@@ -7,21 +7,21 @@
 <div class="background-primary p-5 blue-bg">
  <div class="row card-product d-flex justify-content-center">
   <%= link_to '#origin' do %>
-  <div class="my-4 m-md-0 mx-md-2 landing-page-circle">
+  <div class="landing-page-circle">
     <div>
       <h2>1. choose the origin</h2>
     </div>
   </div>
   <% end %>
   <%= link_to '#results-down' do %>
-  <div class="my-4 m-md-0 mx-md-2 landing-page-circle">
+  <div class="landing-page-circle">
     <div>
       <h2>2.<br>See the packages</h2>
     </div>
   </div>
   <% end %>
   <%= link_to '#order' do %>
-  <div class="my-4 m-md-0 mx-md-2 landing-page-circle">
+  <div class="landing-page-circle">
     <div>
       <h2>3.<br>Place your order</h2>
     </div>
@@ -29,7 +29,7 @@
   <% end %>
 </div>
 </div>
-<div class="card-product d-flex justify-content-start" style="background-image: linear-gradient(-120deg, rgba(90,88,163,0.2) 0%, rgba(90,88,163,0.5) 50%), url('<%= image_path 'flags.jpg' %>');" id="origin">
+<div class="card-product py-5 d-flex justify-content-start" style="background-image: linear-gradient(-120deg, rgba(90,88,163,0.2) 0%, rgba(90,88,163,0.5) 50%), url('<%= image_path 'flags.jpg' %>');" id="origin">
   <div class="col col-md-5 landing-page-card pink-bg text-grey">
     <div>
       <h2>Choose a country</h2>
@@ -37,7 +37,7 @@
     </div>
   </div>
 </div>
-<div class="card-product d-flex justify-content-end" style="background-image: linear-gradient(-120deg, rgba(232,187,191,0.5) 0%, rgba(232,187,191,0.1) 80%), url('<%= image_path 'candy.jpg' %>');" id="results-down">
+<div class="card-product d-flex py-5 justify-content-end" style="background-image: linear-gradient(-120deg, rgba(232,187,191,0.5) 0%, rgba(232,187,191,0.1) 80%), url('<%= image_path 'candy.jpg' %>');" id="results-down">
   <div class="col col-md-5 landing-page-card">
    <div>
      <h2>See the packages</h2>
@@ -45,7 +45,7 @@
    </div>
  </div>
 </div>
-<div class="background-primary blue-bg d-flex justify-content-around align-items-center flex-wrap" id="order">
+<div class="background-primary py-5 blue-bg d-flex justify-content-around align-items-center flex-wrap" id="order">
   <div class="landing-page-card-bottom">
     <h2>Place your order</h2>
     <p> View the package's details and items and order if you like!</p>
