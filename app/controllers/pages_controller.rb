@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @countries = ISO3166::Country.all.map {|country| country.name}.sort
+    @transparent_bar = true
   end
 
   def order_confirmed
