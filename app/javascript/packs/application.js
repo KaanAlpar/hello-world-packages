@@ -2,6 +2,7 @@ import "bootstrap";
 import 'select2/dist/css/select2.css';
 
 import { initSelect2 } from '../components/init_select2';
+import $ from 'jquery'
 
 initSelect2();
 
@@ -24,3 +25,6 @@ searchInput.addEventListener('keyup', (e) => {
       console.error(err);
     });
 });
+
+import { initUpdateNavbarOnScroll } from '../components/navbar';
+initUpdateNavbarOnScroll();

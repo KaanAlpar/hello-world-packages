@@ -1,15 +1,16 @@
 <div class="primary-background pt-5 pb-5">
   <div class="container mb-5">
     <div class="row">
-      <div class="col-8 mb-1 p-1">
+      <div class="col-6 mb-1 pr-5">
         <h2>Items inside this package</h2>
-        <div class="carousel-container w-50">
+        <div class="carousel-container w-80">
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <% @package.items.each_with_index do |item, index| %>
 
               <div class="carousel-item   <%= "active" if index == 0 %>">
                 <%= cl_image_tag item.photo, class: "gallery" %>
+                <h3><%= item.name %></h3>
               </div>
             <% end %>
               <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
