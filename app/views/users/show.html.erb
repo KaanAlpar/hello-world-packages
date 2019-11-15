@@ -1,8 +1,7 @@
-<div class="background-primary">
-  <h1>User Dashboard</h1>
+<div class="background-primary dashboard-container">
+  <h1 id="dashboard-title">Dashboard</h1>
   <div class="card-product d-flex justify-content-center">
     <div class="user_card">
-      <div>
         <h2>My Packages</h2>
           <ul class="list-group">
             <% current_user.packages.first(4).each do |package| %>
@@ -15,7 +14,6 @@
           </ul>
           <%= link_to 'See more', my_packages_path, class: 'button' %>
           <%= link_to 'Add Package', new_package_path, class: 'button' %>
-        </div>
     </div>
     <div class="user_card">
       <div>
