@@ -1,7 +1,10 @@
 class PackagesController < ApplicationController
   def index
-    @packages = Package.where(origin: params[:search][:countries])
-    @search_country = params[:search][:countries]
+    @packages = []
+    @search_country = params[:search][:countries].capitalize
+    Country.search(@search_country).each do |search_result|
+      @packages += Package.where(origin: search_result.name)
+    end
   end
 
   def my_packages
