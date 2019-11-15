@@ -20,11 +20,11 @@
         <h2>My Orders</h2>
         <ul class="list-group">
           <% current_user.orders.reverse.first(4).each do |order| %>
-            <%= link_to order_path(order), class: 'text-decoration-none' do %>
-              <li class="my-packages-orders">
-                <%= order.package.name %>
-              </li>
-            <% end %>
+          <%= link_to order_path(order), class: 'text-decoration-none' do %>
+          <li class="my-packages-orders">
+            <%= order.package.name %>
+          </li>
+          <% end %>
           <% end %>
         </ul>
         <%= link_to 'See More', orders_path, class: 'button' %>

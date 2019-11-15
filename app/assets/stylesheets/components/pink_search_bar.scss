@@ -1,14 +1,39 @@
 .pink-search-bar {
-  background-color: #FEC8C8;
   color: white;
-  text-shadow: 1px 1px 1px #000000;
-  padding: 20px;
   margin-top: 60px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   opacity: 0.90;
 }
 
+.search_input_container {
+  width: 400px;
+  position: relative;
+}
+
 .pink-search-bar h2 {
+  text-shadow: 1px 1px 1px #000000;
   padding-top: 20px;
+}
+
+#results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 38px;
+  width: 100%;
+}
+
+#results a {
+  text-decoration: none;
+  color: #494949;
+}
+
+#results .results-list-item {
+  background: #f3f3f3;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+#search_countries {
+  width: 100%;
+  height: 38px;
 }

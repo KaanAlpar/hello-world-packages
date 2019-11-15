@@ -1,13 +1,18 @@
-<div class="pink-search-bar">
-  <div class="d-flex flex-column align-items-center px-xs-3 mx-md-3 mb-3">
-    <h2>search for a package:</h2>
-    <%#= simple_form_for :search, url: packages_path, method: :get, html: { class: 'form-inline' } do |f| %>
-      <%#= f.input :countries, collection: @countries, label: false, input_html: {class: 'select2'} %>
-      <%#= f.submit "Search", class: "button" %>
-    <%# end %>
-    <%= simple_form_for :search, url: packages_path, method: :get, html: { class: 'form-inline' } do |f| %>
-      <%= f.input :countries, label: false %>
-      <%= f.submit "Search", class: "button" %>
-    <% end %>
+<div>
+  <div class="pink-search-bar">
+    <div class="d-flex flex-column">
+      <h2>search for a package</h2>
+      <%= simple_form_for :search, url: packages_path, method: :get, html: { class: 'form-inline justify-content-center' } do |f| %>
+        <div class="d-flex">
+          <div class="d-flex flex-column search_input_container">
+            <%= f.input :countries, label: false %>
+            <ul id='results'></ul>
+          </div>
+          <div class="div">
+            <%= f.submit "Search", class: "btn btn-primary ml-1" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
